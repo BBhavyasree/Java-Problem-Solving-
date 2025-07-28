@@ -1,32 +1,20 @@
-import java.util.*;
+class Student3 { 
+    String name ; 
+    int rollno ; 
+    double marks ; 
+    void display (String n, int r, double m ) {
+         System.out.println("Name: " +n) ; 
+         System.out.println("rollno: " +r) ; 
+         System.out.println("marks : " +m) ;
+    } 
+    
+} 
+public class Main { 
+    public static void main (String[] args ) { 
+        Student3 ob = new Student3 () ; 
+        ob.display("Suresh", 123, 65) ;  // Passing values directly 
+        ob.display ("Abhi" , 152, 68 ) ; 
+    } 
+} 
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-
-        int len = str.length();
-        int mid = len / 2;
-
-        String firsthalf = str.substring(0, mid);
-        String secondhalf = str.substring(mid);
-
-        int Fcount = 0, Scount = 0;
-
-        for (char ch : firsthalf.toCharArray()) {
-            if (("aeiouAEIOU".indexOf(ch) != -1) && (firsthalf != secondhalf  ) ) {
-                Fcount++;
-            }
-        }
-
-        for (char ch : secondhalf.toCharArray()) {
-            if ( "aeiouAEIOU".indexOf(ch)   != -1  )  {
-                Scount++;
-            }
-        }
-
-        System.out.println("First half vowel count: " + Fcount);
-        System.out.println("Second half vowel count: " + Scount);
-        System.out.println("Absolute difference: " + Math.abs(Fcount - Scount));
-    }
-}
+        
